@@ -17,13 +17,10 @@ import java.util.concurrent.TimeUnit;
 public class RateLimiterTest {
 
     /**
-
      * 令牌桶算法
-
      * 每秒生成 2 個令牌
-
+     * 1000 * 1/2
      */
-
     private static final RateLimiter limiter = RateLimiter.create(2);
 
 
