@@ -21,14 +21,14 @@ public class RateLimiterTest {
      * 每秒生成 2 個令牌
      * 1000 * 1/2
      */
-    private static final RateLimiter limiter = RateLimiter.create(2);
+    private static final RateLimiter limiter = RateLimiter.create(2000);
 
 
     private void rateLimiter() {
 
         // 默认就是 1
 
-        final double acquire = limiter.acquire(1);
+        final double acquire = limiter.acquire(5000);
 
         System.out.println("当前时间 - " + LocalDateTime.now() + " - " + Thread.currentThread().getName()  + " - 阻塞 - " + acquire + " 通过...");
 
